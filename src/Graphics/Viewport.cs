@@ -249,13 +249,14 @@ namespace Microsoft.Xna.Framework.Graphics
 		/// <param name="view">The view <see cref="Matrix"/>.</param>
 		/// <param name="world">The world <see cref="Matrix"/>.</param>
 		/// <returns></returns>
-		public Vector3 Unproject(Vector3 source, Matrix projection, Matrix view, Matrix world)
-		{
-			Matrix matrix = Matrix.Invert(
+		public Vector3 Unproject(Vector3 source, Matrix projection, Matrix view, Matrix world) {
+			Matrix matrix;
+			Matrix.Invert(
 				Matrix.Multiply(
 					Matrix.Multiply(world, view),
 					projection
-				)
+				),
+				out matrix
 			);
 			source.X = (((source.X - X) / ((float) Width)) * 2f) - 1f;
 			source.Y = -((((source.Y - Y) / ((float) Height)) * 2f) - 1f);

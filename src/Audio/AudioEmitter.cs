@@ -135,9 +135,9 @@ namespace Microsoft.Xna.Framework.Audio
 		{
 			emitterData = new FAudio.F3DAUDIO_EMITTER();
 			DopplerScale = 1.0f;
-			Forward = Vector3.Forward;
+			Forward = -Vector3.UnitZ;
 			Position = Vector3.Zero;
-			Up = Vector3.Up;
+			Up = Vector3.UnitY;
 			Velocity = Vector3.Zero;
 
 			/* Unused variables, defaults based on XNA behavior */

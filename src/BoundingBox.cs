@@ -34,8 +34,8 @@ namespace Microsoft.Xna.Framework
 			get
 			{
 				return string.Concat(
-					"Min( ", Min.DebugDisplayString, " ) \r\n",
-					"Max( ", Max.DebugDisplayString, " )"
+					"Min( ", Min.ToString(), " ) \r\n",
+					"Max( ", Max.ToString(), " )"
 				);
 			}
 		}

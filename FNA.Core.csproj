@@ -334,9 +334,6 @@
 		<Compile Include="src\Utilities\FNAInternalExtensions.cs" />
 		<Compile Include="src\Utilities\MarshalHelper.cs" />
 		<Compile Include="src\Utilities\XamarinHelper.cs" />
-		<Compile Include="src\Vector2.cs" />
-		<Compile Include="src\Vector3.cs" />
-		<Compile Include="src\Vector4.cs" />
 		<Compile Include="lib\SDL2-CS\src\SDL2.cs" />
 		<Compile Include="lib\FAudio\csharp\FAudio.cs" />
 		<Compile Include="lib\Theorafile\csharp\Theorafile.cs" />

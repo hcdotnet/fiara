@@ -79,7 +79,9 @@ namespace Microsoft.Xna.Framework
 
 		#region Module Initializer
 
+#pragma warning disable CA2255
 		[ModuleInitializer]
+#pragma warning restore CA2255
 		public static void Init()
 		{
 			// Ignore NativeAOT platforms since they don't perform dynamic loading.

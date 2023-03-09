@@ -1,5 +1,5 @@
 <Project>
-  <PropertyGroup Condition="$(MSBuildProjectName.Contains('FNA.Core'))">
+  <PropertyGroup Condition="$(MSBuildProjectName.Contains('FIARA'))">
     <BaseIntermediateOutputPath>obj_core\</BaseIntermediateOutputPath>
   </PropertyGroup>
 </Project>

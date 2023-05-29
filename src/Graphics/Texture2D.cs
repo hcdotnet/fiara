@@ -346,14 +346,14 @@ namespace Microsoft.Xna.Framework.Graphics
 			}
 
 			int len = Width * Height * GetFormatSize(Format);
-			IntPtr data = Marshal.AllocHGlobal(len);
+			IntPtr data = FNAPlatform.Malloc(len);
 			FNA3D.FNA3D_GetTextureData2D(
 				GraphicsDevice.GLDevice,
 				texture,
 				0,
 				0,
 				Width,
-				height,
+				Height,
 				0,
 				data,
 				len
@@ -369,20 +369,20 @@ namespace Microsoft.Xna.Framework.Graphics
 				quality
 			);
 
-			Marshal.FreeHGlobal(data);
+			FNAPlatform.Free(data);
 		}
 
 		public void SaveAsPng(Stream stream, int width, int height)
 		{
 			int len = Width * Height * GetFormatSize(Format);
-			IntPtr data = Marshal.AllocHGlobal(len);
+			IntPtr data = FNAPlatform.Malloc(len);
 			FNA3D.FNA3D_GetTextureData2D(
 				GraphicsDevice.GLDevice,
 				texture,
 				0,
 				0,
 				Width,
-				height,
+				Height,
 				0,
 				data,
 				len
@@ -398,7 +398,7 @@ namespace Microsoft.Xna.Framework.Graphics
 				data
 			);
 
-			Marshal.FreeHGlobal(data);
+			FNAPlatform.Free(data);
 		}
 
 		#endregion
